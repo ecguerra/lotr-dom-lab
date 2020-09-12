@@ -49,7 +49,7 @@ function makeMiddleEarth () {
   //   2c. includes an h1 with the name of the land inside each land article
 
   //   2d. appends each land to the middle-earth section
-  for(land of lands) {
+  for(let land of lands) {
     const article = document.createElement('article')
     article.setAttribute('id',land)
     article.innerHTML = `<h1>${land}</h1>`
@@ -75,7 +75,7 @@ function makeHobbits() {
   const ul = document.createElement('ul')
   ul.setAttribute('id','hobbits')
   // give each hobbit a class of `hobbit`
-  for(hobbit of hobbits) {
+  for(let hobbit of hobbits) {
     const li = document.createElement('li')
     li.innerText = hobbit
     li.classList.add('hobbit')
@@ -124,7 +124,7 @@ function makeBaddies() {
   // display an unordered list of baddies in Mordor
   const ul = document.createElement('ul')
   // give each of the baddies a class of "baddy"
-  for(baddy of baddies) {
+  for(let baddy of baddies) {
     const li = document.createElement('li')
     li.innerText = baddy
     li.classList.add('baddy')
@@ -151,7 +151,7 @@ function makeBuddies () {
   // put an `unordered list` of the `'buddies'` in the aside
   const ul = document.createElement('ul') 
   // insert your aside as a child element of `rivendell`
-  for(buddy of buddies) {
+  for(let buddy of buddies) {
     const li = document.createElement('li')
     li.innerText = buddy
     li.classList.add('buddy')
@@ -194,7 +194,6 @@ function beautifulStranger() {
   // change the `'Strider'` text to `'Aragorn'`
   document.querySelector('#Strider').innerText = 'Aragorn'
   document.querySelector('#Strider').setAttribute('id','Aragorn')
-
 }
 
 // COMMIT YOUR WORK
@@ -210,7 +209,14 @@ function forgeTheFellowShip() {
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
   // after each character is added make an alert that they // have joined your party
-  
+  const fellowship = document.createElement('div')
+  fellowship.classList.add = ('the-fellowship')
+  const friends = document.querySelectorAll('.hobbit, .buddy')
+  for (let friend of friends) {
+    fellowship.appendChild(friend)
+    alert(`${friend.innerText} has joined your party`)
+  }
+  document.querySelector('#Rivendell').appendChild(fellowship)
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
