@@ -214,7 +214,7 @@ function forgeTheFellowShip() {
   const friends = document.querySelectorAll('.hobbit, .buddy')
   for (let friend of friends) {
     fellowship.appendChild(friend)
-    alert(`${friend.innerText} has joined your party`)
+    // alert(`${friend.innerText} has joined your party`)
   }
   document.querySelector('#Rivendell').appendChild(fellowship)
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -232,6 +232,12 @@ function theBalrog() {
   console.log("9: theBalrog");
    // change the `'Gandalf'` text to `'Gandalf the White'`
    // apply the following style to the element, make the // background 'white', add a grey border
+   const gandalf = document.getElementById('Gandalf the Grey')
+   gandalf.innerText = 'Gandalf the White'
+   gandalf.setAttribute('id','Gandalf')
+   gandalf.style.backgroundColor = 'white'
+   gandalf.style.border = 'grey'
+
 }
 
 // COMMIT YOUR WORK
