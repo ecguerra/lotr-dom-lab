@@ -192,6 +192,9 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+  document.querySelector('#Strider').innerText = 'Aragorn'
+  document.querySelector('#Strider').setAttribute('id','Aragorn')
+
 }
 
 // COMMIT YOUR WORK
