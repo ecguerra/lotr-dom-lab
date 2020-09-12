@@ -211,6 +211,7 @@ function forgeTheFellowShip() {
   // after each character is added make an alert that they // have joined your party
   const fellowship = document.createElement('div')
   fellowship.classList.add = ('the-fellowship')
+  fellowship.setAttribute('id','fellowship')
   const friends = document.querySelectorAll('.hobbit, .buddy')
   for (let friend of friends) {
     fellowship.appendChild(friend)
@@ -270,6 +271,19 @@ function itsDangerousToGoAlone() {
   console.log("11: itsDangerousToGoAlone");
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   // add a div with an id of `'mount-doom'` to `Mordor`
+  const frodo = document.getElementById('Frodo Baggins')
+  const sam = document.getElementById('Samwise "Sam" Gamgee')
+  const fellowship = document.querySelector('#fellowship')
+
+  fellowship.removeChild(frodo)
+  fellowship.removeChild(sam)
+
+  const mordor = document.querySelector('#Mordor')
+  const mtDoom = document.createElement('div')
+  mtDoom.setAttribute('id','mount-doom')
+  mordor.appendChild(frodo)
+  mordor.appendChild(sam)
+  mordor.appendChild(mtDoom)
 }
 
 
