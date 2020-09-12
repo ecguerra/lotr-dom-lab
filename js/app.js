@@ -272,7 +272,9 @@ function itsDangerousToGoAlone() {
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   // add a div with an id of `'mount-doom'` to `Mordor`
   const frodo = document.getElementById('Frodo Baggins')
+  frodo.setAttribute('id','frodo')
   const sam = document.getElementById('Samwise "Sam" Gamgee')
+  sam.setAttribute('id','sam')
   const fellowship = document.querySelector('#fellowship')
 
   fellowship.removeChild(frodo)
@@ -300,6 +302,14 @@ function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
+const gollum = document.createElement('div')
+gollum.setAttribute('id','gollum')
+document.querySelector('#Mordor').appendChild(gollum)
+const ring = document.querySelector('#the-ring')
+document.querySelector('#frodo').removeChild(ring)
+gollum.appendChild(ring)
+document.querySelector('#mount-doom').appendChild(gollum)
+
 }
 
 
